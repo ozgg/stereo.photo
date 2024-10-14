@@ -7,7 +7,7 @@ const router = express.Router();
 router.get('/', (req, res, next) => {
   const data = JSON.parse(fs.readFileSync(path.join(__dirname, '../lib/photos.json'), 'utf8'))
 
-  res.render('index', { title: 'Stereo.photo', photo: data[0] });
+  res.render('photos', { title: 'All stereo photos', photos: data });
 });
 
 module.exports = router;
