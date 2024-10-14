@@ -1,41 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title><%= title %></title>
-    <meta charset="UTF-8"/>
-    <link rel="stylesheet" href="/stylesheets/style.css"/>
-</head>
+<%- include('layout/head', { title: title }) %>
 <body>
-<header class="main-header">
-    <div class="content-wrapper">
-        <nav>
-            <p class="logo"><a href="/">stereo.photo</a></p>
-            <ul class="main-nav">
-                <li><a href="#">All photos</a></li>
-                <li><a href="#">About me</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+<%- include('layout/header') %>
 <main>
     <div class="content-wrapper">
         <h1><%= title %></h1>
         <p>Welcome to <%= title %></p>
         <h2>Most recent photo</h2>
-        <figure class="stereo-image">
-            <picture>
-                <source srcset="/images/stereo/<%= photo['file'] %>.jpg" media="(min-width:720px)"/>
-                <img src="/images/stereo/540/<%= photo['file'] %>_540.jpg" alt="<%= photo['alt']['en'] %>"/>
-            </picture>
-            <figcaption><%= photo['title']['en'] %></figcaption>
-        </figure>
+        <%- include('photos/photo', { photo: photo })%>
         <p><a href="#">See other photos</a></p>
     </div>
 </main>
-<footer class="main-footer">
-    <div class="content-wrapper">
-        &copy; 2008–2024 Maxim Khan-Magomedov
-    </div>
-</footer>
+<%- include('layout/footer') %>
 </body>
 </html>

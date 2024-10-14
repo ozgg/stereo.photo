@@ -1,0 +1,7 @@
+<figure class="stereo-image">
+    <picture>
+        <source srcset="/images/stereo/<%= photo['file'] %>.jpg" media="(min-width:720px)"/>
+        <img src="/images/stereo/540/<%= photo['file'] %>_540.jpg" alt="<%= photo['alt']['en'] %>"/>
+    </picture>
+    <figcaption><%= photo['title']['en'] %></figcaption>
+</figure>
