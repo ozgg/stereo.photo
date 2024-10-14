@@ -6,7 +6,7 @@
 <main>
     <div class="content-wrapper">
         <h1>All photos</h1>
-        <ul>
+        <ul class="photos">
             <% for (let i = 0; i < photos.length; i++) { %>
             <li>
                 <%- include('photos/photo', { photo: photos[i] }) %>
