@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <title><%= title %></title>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="/stylesheets/style.css"/>
+</head>
+<body>
+<header class="main-header">
+    <div class="content-wrapper">
+        <nav>
+            <p class="logo"><a href="/">stereo.photo</a></p>
+            <ul class="main-nav">
+                <li><a href="#">All photos</a></li>
+                <li><a href="#">About me</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <div class="content-wrapper">
+        <h1><%= title %></h1>
+        <p>Welcome to <%= title %></p>
+        <h2>Most recent photo</h2>
+        <figure class="stereo-image">
+            <picture>
+                <source srcset="/images/4x3a.svg" media="(min-width:720px)"/>
+                <img src="/images/4x3.svg" alt="4x3 placeholder"/>
+            </picture>
+            <figcaption>Placeholder</figcaption>
+        </figure>
+        <p><a href="#">See other photos</a></p>
+    </div>
+</main>
+<footer class="main-footer">
+    <div class="content-wrapper">
+        &copy; 2008–2024 Maxim Khan-Magomedov
+    </div>
+</footer>
+</body>
 </html>
