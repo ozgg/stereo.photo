@@ -13,6 +13,20 @@
             </li>
             <% } %>
         </ul>
+
+        <nav class="pagination">
+            <ul>
+                <li><a href="/photos?page=1" class="first">|&lt;</a></li>
+                <% if (pagination.prev) { %>
+                    <li><a href="/photos?page=<%= pagination.prev %>" class="prev"><%= pagination.prev %>&larr;</a></li>
+                <% } %>
+                <li><span><%= pagination.current %></span></li>
+                <% if (pagination.next) { %>
+                    <li><a href="/photos?page=<%= pagination.next %>" class="next">&rarr;<%= pagination.next %></a></li>
+                <% } %>
+                <li><a href="/photos?page=<%= pagination.last %>" class="last">&gt;|</a></li>
+            </ul>
+        </nav>
     </div>
 </main>
 <%- include('layout/footer') %>
