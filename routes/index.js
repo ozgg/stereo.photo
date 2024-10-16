@@ -1,13 +1,12 @@
 const express = require('express');
-const path = require('path')
-const fs = require('fs')
 const router = express.Router();
+const PhotoHandler = require('../lib/photo_handler')
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
-  const data = JSON.parse(fs.readFileSync(path.join(__dirname, '../lib/photos.json'), 'utf8'))
+  const handler = new PhotoHandler()
 
-  res.render('index', { title: 'Stereo.photo', photo: data[0] });
+  res.render('index', { title: 'Stereo.photo', photo: handler.first() });
 });
 
 module.exports = router;
