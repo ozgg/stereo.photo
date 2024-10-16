@@ -3,5 +3,11 @@
         <source srcset="/images/stereo/<%= photo.file %>.jpg" media="(min-width:720px)"/>
         <img src="/images/stereo/540/<%= photo.file %>_540.jpg" alt="<%= photo.alt %>"/>
     </picture>
-    <figcaption><%= photo.title %></figcaption>
+    <figcaption>
+        <% if (link) { %>
+            <a href="/photos/<%= photo.file %>"><%= photo.title %></a>
+        <% } else { %>
+            <%= photo.title %>
+        <% } %>
+    </figcaption>
 </figure>

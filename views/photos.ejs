@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('layout/head', { title: title }) %>
+<%- include('layout/head', { title }) %>
 <body>
 <%- include('layout/header') %>
 <main>
     <div class="content-wrapper">
-        <h1>All photos</h1>
+        <h1>All photos, page <%= pagination.current %></h1>
         <ul class="photos">
-            <% for (let i = 0; i < photos.length; i++) { %>
+            <% for (let photo of photos) { %>
                 <li>
-                    <%- include('photos/photo', { photo: photos[i] }) %>
+                    <%- include('photos/photo', { photo, link: true }) %>
                 </li>
             <% } %>
         </ul>
 
-        <%- include('photos/pagination', { pagination: pagination }) %>
+        <%- include('photos/pagination', { pagination }) %>
     </div>
 </main>
 <%- include('layout/footer') %>

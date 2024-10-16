@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('layout/head', { title }) %>
+<%- include('layout/head', { title: photo.title }) %>
 <body>
 <%- include('layout/header') %>
 <main>
     <div class="content-wrapper">
-        <h1><%= title %></h1>
-        <p>Text about this site will be here.</p>
+        <h1><%= photo.title %></h1>
+        <%- include('photos/photo', { photo, link: false }) %>
     </div>
 </main>
 <%- include('layout/footer') %>
