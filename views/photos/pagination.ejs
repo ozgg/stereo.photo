@@ -1,0 +1,24 @@
+<nav class="pagination">
+    <% if (pagination.current > 2) { %>
+        <a href="/photos?page=1" class="first">1</a>
+    <% } %>
+    <% if (pagination.current > 3) { %>
+        <span class="spacer">&hellip;</span>
+    <% } %>
+    <% if (pagination.prev) { %>
+        <a href="/photos?page=<%= pagination.prev %>"
+           class="prev"><%= pagination.prev %></a>
+    <% } %>
+    <span><%= pagination.current %></span>
+    <% if (pagination.next) { %>
+        <a href="/photos?page=<%= pagination.next %>"
+           class="next"><%= pagination.next %></a>
+    <% } %>
+    <% if (pagination.current < pagination.last - 2) { %>
+        <span class="spacer">&hellip;</span>
+    <% } %>
+    <% if (pagination.current < pagination.last - 1) { %>
+        <a href="/photos?page=<%= pagination.last %>"
+           class="last"><%= pagination.last %></a>
+    <% } %>
+</nav>
