@@ -1,0 +1,8 @@
+<nav class="adjacent-photos">
+    <% if (adjacent.prev) { %>
+        <a href="/photos/<%= adjacent.prev %>" class="prev">Previous</a>
+    <% } %>
+    <% if (adjacent.next) { %>
+        <a href="/photos/<%= adjacent.next %>" class="next">Next</a>
+    <% } %>
+</nav>

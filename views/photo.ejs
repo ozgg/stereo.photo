@@ -7,6 +7,7 @@
     <div class="content-wrapper">
         <h1><%= photo.title %></h1>
         <%- include('photos/photo', { photo, link: false }) %>
+        <%- include('photos/adjacent', { adjacent: photo.adjacent }) %>
     </div>
 </main>
 <%- include('layout/footer') %>
