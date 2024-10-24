@@ -4,10 +4,39 @@
 <body>
 <%- include('layout/header') %>
 <main>
-    <div class="content-wrapper">
+    <article class="content-wrapper about">
         <h1><%= title %></h1>
-        <p>Text about this site will be here.</p>
-    </div>
+        <section>
+            <figure>
+                <picture>
+                    <source srcset="/images/maxim_1280.jpg" media="(min-width:640px)"/>
+                    <img src="/images/maxim_640.jpg" alt="Maxim Khan-Magomedov"/>
+                </picture>
+                <figcaption>That's me</figcaption>
+            </figure>
+
+            <p>
+                Hello. My name is Maxim and I like stereo photography. This
+                site contains photos that I take and compose in cross-view
+                technique. That means that image for the left eye is on the
+                right and image for the right eye is on the left. To see stereo
+                image, cross your eyes in a way that both parts merge into
+                three sections: right, stereo, left.
+            </p>
+            <p>
+                You can read more about stereo photography techniques
+                <a href="https://en.wikipedia.org/wiki/Stereo_photography_techniques" rel="external nofollow" target="_blank">on wikipedia</a>.
+                Besides, there is <a href="https://www.reddit.com/r/CrossView/" rel="external nofollow" target="_blank">/r/crossview</a>
+                subreddit with other images by different enthusiasts
+                and tips on how to view those images.
+            </p>
+            <p>
+                My other (non-stereo) photos can be found at
+                <a href="https://maxim.photo" rel="external follow" target="_blank">maxim.photo</a>.
+                You can contact me via email maxim at khan-magomedov.com.
+            </p>
+        </section>
+    </article>
 </main>
 <%- include('layout/footer') %>
 </body>

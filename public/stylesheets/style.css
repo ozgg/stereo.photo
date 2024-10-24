@@ -141,12 +141,12 @@ a:hover {
 }
 
 .main-nav li:not(:last-of-type)::after {
-     background: #aaa;
-     content: '\A';
-     display: inline-block;
-     height: var(--font-size-normal);
-     margin: 0 var(--spacer-xxs);
-     width: .125rem;
+    background: #aaa;
+    content: '\A';
+    display: inline-block;
+    height: var(--font-size-normal);
+    margin: 0 var(--spacer-xxs);
+    width: .125rem;
 }
 
 .main-nav a {
@@ -213,10 +213,30 @@ small {
 .adjacent-photos {
 
 }
+
 .adjacent-photos .prev {
     margin-right: auto;
 }
 
 .adjacent-photos .next {
     margin-left: auto;
+}
+
+.about figure {
+    font-size: var(--font-size-decreased);
+    max-width: 20rem;
+}
+
+.about figure picture {
+    aspect-ratio: 1;
+    display: flex;
+    width: 100%;
+}
+
+.about figure img {
+    width: 100%;
+}
+
+.about p {
+    max-width: 40rem;
 }
