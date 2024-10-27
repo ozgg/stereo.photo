@@ -6,7 +6,7 @@ const PhotoHandler = require('../lib/photo_handler')
 router.get('/', (req, res, next) => {
   const handler = new PhotoHandler()
 
-  res.render('index', { title: 'Stereo photography', photo: handler.first() });
+  res.render('index', { title: 'Stereo photography', photo: handler.random() });
 });
 
 module.exports = router;
